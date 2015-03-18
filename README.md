@@ -1,23 +1,23 @@
-## DeferredHTTPStatuses
-A quick promise wrapper and helper for http status codes
+## PromisedHTTPStatuses
+A quick ES6 promise wrapper and helper for http status codes
 
 ### Install
 
-    npm install deferred-http-statuses --save
+    npm install promised-http-statuses --save
 
 ### Use
 
-    var Deferred = require('deferred-http-statuses');
+    var PromisedHTTPStatuses = require('promised-http-statuses');
 
-    var deferred = new Deferred();
+    var promise = new Promise(PromisedHTTPStatuses);
 
     if (err) {
-      deferred.badRequest(err);
+      promise.badRequest(err);
     } else {
-      deferred.success();
+      promise.success();
     }
 
-    return deferred.promise;
+    return promise;
 
 ### Methods
 
@@ -34,5 +34,4 @@ A quick promise wrapper and helper for http status codes
       internalServerError,
       // Exposure
       reject: deferred.reject,
-      resolve: deferred.resolve,
-      promise: deferred.promise
+      resolve:
