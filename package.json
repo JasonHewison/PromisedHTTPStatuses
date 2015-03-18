@@ -1,7 +1,7 @@
 {
   "name": "promised-http-statuses",
   "version": "1.0.0",
-  "description": "A quick ES6 promise wrapper and helper for http status codes",
+  "description": "A simple ES6 promise helper for http status codes",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

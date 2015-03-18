@@ -1,5 +1,5 @@
 ## PromisedHTTPStatuses
-A quick ES6 promise wrapper and helper for http status codes
+A simple ES6 promise helper for http status codes
 
 ### Install
 
