@@ -1,0 +1,25 @@
+{
+  "name": "promised-http-statuses",
+  "version": "1.0.0",
+  "description": "A quick ES6 promise wrapper and helper for http status codes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GrumpyWizards/PromisedHTTPStatuses.git"
+  },
+  "keywords": [
+    "q",
+    "promise",
+    "ES6",
+    "http"
+  ],
+  "author": "Gregory Pratt <gregory.pratt@me.com> (http://grumpywizards.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GrumpyWizards/PromisedHTTPStatuses/issues"
+  },
+  "homepage": "https://github.com/GrumpyWizards/PromisedHTTPStatuses"
+}
