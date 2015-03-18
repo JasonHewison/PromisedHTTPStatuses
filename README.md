@@ -7,31 +7,41 @@ A quick ES6 promise wrapper and helper for http status codes
 
 ### Use
 
-    var PromisedHTTPStatuses = require('promised-http-statuses');
+    var statusCode = require('promised-http-statuses');
 
-    var promise = new Promise(PromisedHTTPStatuses);
+    function save() {
+      return new Promise(function () {
 
-    if (err) {
-      promise.badRequest(err);
-    } else {
-      promise.success();
+        if (saved) {
+          statusCode.success('Saved!');
+        } else {
+          statusCode.conflict('Already exists');
+	      }
+
+      });
     }
 
-    return promise;
+    save().then(function (response) {
+      response.status // 2xx
+      response.data
+    }, function (response) {
+      response.status // 4xx, 500
+      response.data
+    });
 
 ### Methods
 
       // 200s
-      success,
-      noContent,
+      success(data),
+      noContent(data),
       // 400s
-      badRequest,
-      unauthorized,
-      notFound,
-      conflict,
-      gone,
+      badRequest(data),
+      unauthorized(data),
+      notFound(data),
+      conflict(data),
+      gone(data),
       // 500s
-      internalServerError,
+      internalServerError(data),
       // Exposure
-      reject: deferred.reject,
-      resolve:
+      reject(status, data)
+      resolve(status, data)
